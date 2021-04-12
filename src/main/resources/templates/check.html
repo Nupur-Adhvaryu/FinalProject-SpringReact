@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th ="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf extras springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ex 8.2</title>
+<style type="text/css">
+body{
+background-color:darkblue;
+color: white;
+}
+</style>
+</head>
+<body>
+	<h1>CHECK PAGE. Hi prof. it is Nupur</h1>
+
+
+<div sec:authorize="isAuthenticated()">
+Name: <span sec:authentication="name"></span><br>
+Roles: <span sec:authentication="principal.authorities"></span><br><br>
+
+</div>
+</body>
+</html>
